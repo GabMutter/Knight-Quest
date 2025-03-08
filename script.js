@@ -77,8 +77,8 @@ function create() {
     const map = this.make.tilemap({ key : 'map'});
     const tileset = map.addTilesetImage('mainlev_build', 'tiles');
 
-    const back = map.createLayer('Camada de Blocos 2', tileset, 0, alturaJogo/7.9);
-    const ground = map.createLayer('Camada de Blocos 1', tileset, 0, alturaJogo/7.9); 
+    const back = map.createLayer('Camada de Blocos 2', tileset, 0, 81);
+    const ground = map.createLayer('Camada de Blocos 1', tileset, 0, 81); 
     ground.setCollisionByProperty({ colisao: true });
 
     objInter = this.physics.add.sprite(4615, 440, 'door');
