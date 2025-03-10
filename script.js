@@ -221,7 +221,6 @@ function create() {
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     this.keySPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    this.keyQ = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Q);
     this.cursors = this.input.keyboard.createCursorKeys();
 
     this.cameras.main.setBounds(0, 0, 4800, 600);  
@@ -254,12 +253,12 @@ function update() {
         }
     }
 
-    if (Phaser.Input.Keyboard.JustDown(this.keySPACE) && cavaleiro.body.blocked.down) {
+    if (Phaser.Input.Keyboard.JustDown(this.keyW) && cavaleiro.body.blocked.down) {
         cavaleiro.setVelocityY(-370);
         cavaleiro.anims.play('jumpK', true);
     }
 
-    if (Phaser.Input.Keyboard.JustDown(this.keyQ)) {
+    if (Phaser.Input.Keyboard.JustDown(this.keySPACE)) {
         isAttacking = true;
         cavaleiro.anims.play('attackK', true);
         cavaleiro.setVelocityX(0);
